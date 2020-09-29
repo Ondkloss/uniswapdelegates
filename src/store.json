@@ -1,0 +1,19 @@
+{
+    "uniswap": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+    "addresses": [
+        {
+            "alias": "yuni.finance (Andre Cronje)",
+            "address": "0x1994b59E02Cd0d09D839b03660C205e88a929b81",
+            "link": "https://yuni.finance",
+            "govLinks": []
+        },
+        {
+            "alias": "Dharma",
+            "address": "0x7e4A8391C728fEd9069B2962699AB416628B19Fa",
+            "link": "https://www.dharma.io",
+            "govLinks": [
+                "https://gov.uniswap.org/t/proposal-excluded-proxy-contract-airdrop-phase-1/5811"
+            ]
+        }
+    ]
+}

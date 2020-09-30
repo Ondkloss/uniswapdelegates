@@ -1,6 +1,33 @@
 body {
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
+a svg {
+  color: black;
 }
 
 .outerdiv {
@@ -13,6 +40,32 @@ body {
   margin: 10px;
 }
 
+.buttondiv {
+  margin: 20px;
+}
+
 .alert {
   margin: 5px;
+}
+
+.relative {
+  position: relative;
+}
+
+.permalink {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.gotodiv {
+  padding: 10px;
+}
+
+.spacingleft {
+  margin-left: 15px;
+}
+
+.pointer {
+  cursor: pointer;
 }

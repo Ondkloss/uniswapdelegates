@@ -11,3 +11,5 @@ As this repo shows, this is spaghetti code that was bootstrapped with `create-re
 ## Currently known issues
 
 * Not handling chain change
+
+* List not sorted by delegate votes

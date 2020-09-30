@@ -111,6 +111,8 @@ function App() {
 
   const getEtherScanContractElement = () => <TransitionAlert severity="info">Check out the <a href="https://etherscan.io/address/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984#readContract">Uniswap contract on Etherscan</a> to run the queries yourself.</TransitionAlert>
 
+  const getCreditsElement = () => <TransitionAlert severity="info">Favicon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>.</TransitionAlert>
+
   let content;
 
   if (provider == null) {
@@ -145,6 +147,7 @@ function App() {
     {getUniswapVoteElement()}
     {getDuneAnalyticsElement()}
     {getEtherScanContractElement()}
+    {getCreditsElement()}
     <SimpleSnackbar open={open} setOpen={setOpen} />
   </div>
 }

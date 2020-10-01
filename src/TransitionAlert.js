@@ -1,11 +1,11 @@
-import React from 'react';
-import Alert from '@material-ui/lab/Alert';
-import IconButton from '@material-ui/core/IconButton';
-import Collapse from '@material-ui/core/Collapse';
-import CloseIcon from '@material-ui/icons/Close';
+import React from 'react'
+import Alert from '@material-ui/lab/Alert'
+import IconButton from '@material-ui/core/IconButton'
+import Collapse from '@material-ui/core/Collapse'
+import CloseIcon from '@material-ui/icons/Close'
 
 export default function TransitionAlert({ severity, children }) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(true)
 
   return (
     <Collapse in={open} className="alert">
@@ -17,7 +17,7 @@ export default function TransitionAlert({ severity, children }) {
             color="inherit"
             size="small"
             onClick={() => {
-              setOpen(false);
+              setOpen(false)
             }}
           >
             <CloseIcon fontSize="inherit" />
@@ -27,5 +27,5 @@ export default function TransitionAlert({ severity, children }) {
         {children}
       </Alert>
     </Collapse>
-  );
+  )
 }

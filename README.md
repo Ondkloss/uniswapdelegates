@@ -1,5 +1,7 @@
 # Uniswap delegates
 
+View it here: <https://ondkloss.github.io/uniswapdelegates>
+
 A simple frontend for viewing number of delegate votes an address has received.
 
 It features a premade list of famous or high vote count addresses.
@@ -8,8 +10,12 @@ It features a premade list of famous or high vote count addresses.
 
 As this repo shows, this is spaghetti code that was bootstrapped with `create-react-app`. It provides no guarantees.
 
-## Currently known issues
+## Feedback and issues
 
-* Not handling chain change
+Feel free to report feedback and issues here: <https://github.com/ondkloss/uniswapdelegates/issues>
 
-* List not sorted by delegate votes
+And fork if you want to submit a pull request.
+
+## License
+
+This code is released under WTFPL, which allows you to do whatever you want with it.

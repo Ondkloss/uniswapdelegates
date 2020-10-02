@@ -68,6 +68,15 @@ a svg {
   margin-left: 15px;
 }
 
+.spacingright {
+  margin-right: 15px;
+}
+
 .pointer {
   cursor: pointer;
+}
+
+.centerflex {
+  display: flex;
+  align-items: center;
 }

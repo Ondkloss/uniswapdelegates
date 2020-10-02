@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Web3 from 'web3'
 import Contract from 'web3-eth-contract'
-import Paper from '@material-ui/core/Paper'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import Button from '@material-ui/core/Button'
 import {
   Switch,
@@ -47,7 +47,7 @@ function App() {
       }
     }
     enable()
-  }, [givenProvider])
+  }, [])
 
 
   const handleAccounts = (accounts) => {
@@ -79,7 +79,7 @@ function App() {
       })
   }
 
-  const getLoadingElement = () => <Paper variant="outlined" className="innerdiv">Loading...</Paper>
+  const getLoadingElement = () => <CircularProgress />
 
   const getNoAccountElement = () => <div className="buttondiv">
     <Button variant="outlined" color="primary" onClick={connect} startIcon={<ConnectIcon fontSize="inherit" color="primary" />}>Connect you account</Button>

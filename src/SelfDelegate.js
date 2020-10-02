@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import Paper from '@material-ui/core/Paper'
 import './App.css'
 import { getDelegatesString } from './utils'
@@ -18,20 +19,23 @@ function SelfDelegate({ from, address, contract }) {
       })
     contract.methods.balanceOf(address).call({ from })
       .then(result => {
-        setBalance(result)
+        setBalance(parseInt(result))
       })
-  }, [address, contract.methods, from])
+  }, [])
 
   const getDelegateToElement = () => {
     if (delegate) {
-      let indictment = ['The address is', 'itself']
+      let indictment = ['The address is', 'The address has', 'itself']
 
       if (address === from) {
-        indictment = ['You are', 'yourself']
+        indictment = ['You are', 'You have', 'yourself']
       }
 
-      if (delegate.toLowerCase() === address.toLowerCase()) {
-        return <div>{indictment[0]} delegating {getDelegatesString(balance)} UNI to <Tooltip title="Permalink"><Link to={`/address/${delegate}`}>{indictment[1]} <LinkIcon fontSize="inherit" /></Link></Tooltip></div>
+      if(balance === 0) {
+        return <div>{indictment[1]} no UNI to delegate</div>
+      }
+      else if (delegate.toLowerCase() === address.toLowerCase()) {
+        return <div>{indictment[0]} delegating {getDelegatesString(balance)} UNI to <Tooltip title="Permalink"><Link to={`/address/${delegate}`}>{indictment[2]} <LinkIcon fontSize="inherit" /></Link></Tooltip></div>
       }
       else if (delegate === '0x0000000000000000000000000000000000000000') {
         return <div>{indictment[0]} not delegating the {getDelegatesString(balance)} UNI</div>
@@ -41,7 +45,7 @@ function SelfDelegate({ from, address, contract }) {
       }
     }
     else {
-      return <div>Loading...</div>
+      return <CircularProgress />
     }
   }
 

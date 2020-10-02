@@ -47,7 +47,7 @@ function App() {
       }
     }
     enable()
-  }, [])
+  }, [givenProvider])
 
 
   const handleAccounts = (accounts) => {

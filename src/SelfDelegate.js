@@ -21,7 +21,7 @@ function SelfDelegate({ from, address, contract }) {
       .then(result => {
         setBalance(parseInt(result))
       })
-  }, [])
+  }, [address, contract.methods, from])
 
   const getDelegateToElement = () => {
     if (delegate) {

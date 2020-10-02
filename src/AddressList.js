@@ -25,7 +25,7 @@ const Addresslist = ({ list, from, contract, showSnackbar }) => {
       setAddresses(newAddresses)
     }
     getCurrentVotes()
-  }, [])
+  }, [contract.methods, from, list])
 
 
   if (addresses) {

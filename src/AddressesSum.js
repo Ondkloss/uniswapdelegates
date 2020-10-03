@@ -7,7 +7,7 @@ import { getDelegatesString } from './utils'
 const AddressesSum = ({ delegates }) => {
 
   const canApproveProposal = (delegates) => {
-    return delegates > Math.pow(40, 25)
+    return delegates > 4 * Math.pow(10, 25)
   }
 
   const canApprove = canApproveProposal(delegates)

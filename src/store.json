@@ -21,11 +21,6 @@
             "delegates": 0
         },
         {
-            "alias": "<Unknown>",
-            "address": "0xf94e5cdf41247e268d4847c30a0dc2893b33e85d",
-            "delegates": 0
-        },
-        {
             "alias": "monet-supply",
             "address": "0x8d07d225a769b7af3a923481e1fdf49180e6a265",
             "link": "https://gov.uniswap.org/t/delegate-to-monet-supply/1756",
@@ -41,6 +36,21 @@
             "alias": "andrecronje.eth",
             "address": "0x2d407ddb06311396fe14d4b49da5f0471447d45c",
             "link": "https://twitter.com/AndreCronjeTech/status/1308689086375497728",
+            "delegates": 0
+        },
+        {
+            "alias": "<Unknown>",
+            "address": "0xf94e5cdf41247e268d4847c30a0dc2893b33e85d",
+            "delegates": 0
+        },
+        {
+            "alias": "<Unknown>",
+            "address": "0x2c4f771208d48035bf2d745974a5795d88c4f69a",
+            "delegates": 0
+        },
+        {
+            "alias": "<Unknown>",
+            "address": "0xf54b90a4a529ee43d924d5131c09c760a5cb129c",
             "delegates": 0
         }
     ]

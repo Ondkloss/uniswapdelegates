@@ -35,6 +35,7 @@ a svg {
   text-align: left;
   padding: 10px;
   margin: 10px;
+  word-wrap: break-word;
 }
 
 .buttondiv {

@@ -47,7 +47,7 @@ function Address({ address, from, contract, showSnackbar }) {
   }
 
   const getDelegateElement = () => {
-    if(Web3.givenProvider) {
+    if(from && Web3.givenProvider) {
       return <Tooltip title="Delegate my votes to this address"><Button variant="outlined" size="small" color="primary" onClick={delegate} startIcon={<DelegateIcon fontSize="inherit" color="primary" />}>Delegate</Button></Tooltip>
     }
   }

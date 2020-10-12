@@ -1,4 +1,5 @@
 import React from 'react'
+import Web3 from 'web3'
 import Paper from '@material-ui/core/Paper'
 import ExternalLinkIcon from '@material-ui/icons/Launch'
 import CopyIcon from '@material-ui/icons/FileCopy'
@@ -45,6 +46,12 @@ function Address({ address, from, contract, showSnackbar }) {
     }
   }
 
+  const getDelegateElement = () => {
+    if(Web3.givenProvider) {
+      return <Tooltip title="Delegate my votes to this address"><Button variant="outlined" size="small" color="primary" onClick={delegate} startIcon={<DelegateIcon fontSize="inherit" color="primary" />}>Delegate</Button></Tooltip>
+    }
+  }
+
   if (valid) {
     return <Paper variant="outlined" className="innerdiv relative">
       {getAliasElement()}
@@ -54,7 +61,7 @@ function Address({ address, from, contract, showSnackbar }) {
         <Tooltip title="Copy to clipboard"><CopyIcon onClick={handleCopyClick} fontSize="inherit" className="spacingleft pointer" /></Tooltip>
       </div>
       <div className="addressdiv">Delegates: {getDelegatesString(address.delegates)} {getSendProposalElement()} {getApproveProposalElement()}
-        <Tooltip title="Delegate my votes to this address"><Button variant="outlined" size="small" color="primary" onClick={delegate} startIcon={<DelegateIcon fontSize="inherit" color="primary" />}>Delegate</Button></Tooltip>
+        {getDelegateElement()}
       </div>
     </Paper>
   }

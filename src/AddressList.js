@@ -32,7 +32,7 @@ const Addresslist = ({ list, from, contract, showSnackbar }) => {
     const sum = addresses.reduce((p, c) => ({ delegates: p.delegates + c.delegates }), { delegates: 0 }).delegates
     return <>
       {addresses.length > 1 && <AddressesSum delegates={sum} />}
-      {addresses.map(a => <Address key={a.address} address={a} showSnackbar={showSnackbar} />)}
+      {addresses.map(a => <Address key={a.address} address={a} from={from} contract={contract} showSnackbar={showSnackbar} />)}
     </>
   }
   else {

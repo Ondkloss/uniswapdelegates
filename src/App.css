@@ -47,6 +47,11 @@ a svg {
   margin: 10px;
 }
 
+.addressdiv {
+  padding: 5px;
+  padding-left: 5px;
+}
+
 .alert {
   margin: 5px;
 }

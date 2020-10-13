@@ -53,6 +53,12 @@
             "alias": "<Unknown>",
             "address": "0xf54b90a4a529ee43d924d5131c09c760a5cb129c",
             "delegates": 0
+        },
+        {
+            "alias": "Hiturunk",
+            "address": "0be0ecc301a1c0175f07a66243cff628c24db852",
+            "link": "https://gov.uniswap.org/t/hiturunk-for-delegate-mine-eth-uni-now/6788",
+            "delegates": 0
         }
     ]
 }

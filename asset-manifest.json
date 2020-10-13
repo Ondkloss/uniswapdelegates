@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/uniswapdelegates/static/css/main.02bdd831.chunk.css",
-    "main.js": "/uniswapdelegates/static/js/main.629339db.chunk.js",
-    "main.js.map": "/uniswapdelegates/static/js/main.629339db.chunk.js.map",
+    "main.js": "/uniswapdelegates/static/js/main.321a37ac.chunk.js",
+    "main.js.map": "/uniswapdelegates/static/js/main.321a37ac.chunk.js.map",
     "runtime-main.js": "/uniswapdelegates/static/js/runtime-main.391b5796.js",
     "runtime-main.js.map": "/uniswapdelegates/static/js/runtime-main.391b5796.js.map",
     "static/js/2.8c98231d.chunk.js": "/uniswapdelegates/static/js/2.8c98231d.chunk.js",
     "static/js/2.8c98231d.chunk.js.map": "/uniswapdelegates/static/js/2.8c98231d.chunk.js.map",
     "index.html": "/uniswapdelegates/index.html",
-    "precache-manifest.48518149d23ca4ac4ee20470c7747021.js": "/uniswapdelegates/precache-manifest.48518149d23ca4ac4ee20470c7747021.js",
+    "precache-manifest.e83f41a72a5b99192b4f69ea4a204f39.js": "/uniswapdelegates/precache-manifest.e83f41a72a5b99192b4f69ea4a204f39.js",
     "service-worker.js": "/uniswapdelegates/service-worker.js",
     "static/css/main.02bdd831.chunk.css.map": "/uniswapdelegates/static/css/main.02bdd831.chunk.css.map",
     "static/js/2.8c98231d.chunk.js.LICENSE.txt": "/uniswapdelegates/static/js/2.8c98231d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.391b5796.js",
     "static/js/2.8c98231d.chunk.js",
     "static/css/main.02bdd831.chunk.css",
-    "static/js/main.629339db.chunk.js"
+    "static/js/main.321a37ac.chunk.js"
   ]
 }

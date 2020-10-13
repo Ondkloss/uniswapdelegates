@@ -34,6 +34,7 @@ function App() {
         window.ethereum
           .request({ method: 'eth_accounts' })
           .then(accounts => {
+            console.log('Accounts', accounts)
             handleAccounts(accounts)
             setChain(window.ethereum.chainId)
             setLoaded(true)
@@ -47,7 +48,8 @@ function App() {
       }
     }
     enable()
-  }, [givenProvider])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
 
   const handleAccounts = (accounts) => {

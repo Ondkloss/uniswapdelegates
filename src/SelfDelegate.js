@@ -15,13 +15,16 @@ function SelfDelegate({ from, address, contract }) {
   useEffect(() => {
     contract.methods.delegates(address).call({ from })
       .then(result => {
+        console.log('Delegates', result)
         setDelegate(result)
       })
     contract.methods.balanceOf(address).call({ from })
       .then(result => {
+        console.log('Balance', result)
         setBalance(parseInt(result))
       })
-  }, [address, contract.methods, from])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const getDelegateToElement = () => {
     if (delegate) {
@@ -31,7 +34,7 @@ function SelfDelegate({ from, address, contract }) {
         indictment = ['You are', 'You have', 'yourself']
       }
 
-      if(balance === 0) {
+      if (balance === 0) {
         return <div>{indictment[1]} no UNI to delegate</div>
       }
       else if (delegate.toLowerCase() === address.toLowerCase()) {

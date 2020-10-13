@@ -12,8 +12,9 @@ import Button from '@material-ui/core/Button'
 import DelegateIcon from '@material-ui/icons/HowToVote'
 import './App.css'
 import { getDelegatesString, copyToClipboard, isAddress } from './utils'
+import Proposal from './Proposal'
 
-function Address({ address, from, contract, showSnackbar }) {
+function Address({ address, from, proposals, contract, alphaContract, showSnackbar, showProposals }) {
   const valid = isAddress(address.address)
 
   const delegate = async () => {
@@ -47,23 +48,32 @@ function Address({ address, from, contract, showSnackbar }) {
   }
 
   const getDelegateElement = () => {
-    if(from && Web3.givenProvider) {
+    if (from && Web3.givenProvider) {
       return <Tooltip title="Delegate my votes to this address"><Button variant="outlined" size="small" color="primary" onClick={delegate} startIcon={<DelegateIcon fontSize="inherit" color="primary" />}>Delegate</Button></Tooltip>
     }
   }
 
+  const getProposalsElement = () => {
+    if (showProposals) {
+      return proposals.map(p => <Proposal key={p.id} alphaContract={alphaContract} proposal={p} />)
+    }
+  }
+
   if (valid) {
-    return <Paper variant="outlined" className="innerdiv relative">
-      {getAliasElement()}
-      <div className="addressdiv">
-        Address: <Tooltip title="Permalink"><Link to={`/address/${address.address}`}>{address.address} <LinkIcon fontSize="inherit" /></Link></Tooltip>
-        <Tooltip title="Etherscan"><a href={`https://etherscan.io/address/${address.address}`}><ExternalLinkIcon fontSize="inherit" className="spacingleft" /></a></Tooltip>
-        <Tooltip title="Copy to clipboard"><CopyIcon onClick={handleCopyClick} fontSize="inherit" className="spacingleft pointer" /></Tooltip>
-      </div>
-      <div className="addressdiv">Delegates: {getDelegatesString(address.delegates)} {getSendProposalElement()} {getApproveProposalElement()}
-        {getDelegateElement()}
-      </div>
-    </Paper>
+    return <>
+      <Paper variant="outlined" className="innerdiv relative">
+        {getAliasElement()}
+        <div className="addressdiv">
+          Address: <Tooltip title="Permalink"><Link to={`/address/${address.address}`}>{address.address} <LinkIcon fontSize="inherit" /></Link></Tooltip>
+          <Tooltip title="Etherscan"><a href={`https://etherscan.io/address/${address.address}`}><ExternalLinkIcon fontSize="inherit" className="spacingleft" /></a></Tooltip>
+          <Tooltip title="Copy to clipboard"><CopyIcon onClick={handleCopyClick} fontSize="inherit" className="spacingleft pointer" /></Tooltip>
+        </div>
+        <div className="addressdiv">Delegates: {getDelegatesString(address.delegates)} {getSendProposalElement()} {getApproveProposalElement()}
+          {getDelegateElement()}
+        </div>
+      </Paper>
+      {getProposalsElement()}
+    </>
   }
   else {
     return <Paper variant="outlined" className="innerdiv">

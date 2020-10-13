@@ -23,6 +23,12 @@ body {
   }
 }
 
+p {
+  padding: 0px;
+  margin: 5px;
+  margin-left: 0px;
+}
+
 a svg {
   color: black;
 }

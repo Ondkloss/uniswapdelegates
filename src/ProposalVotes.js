@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
 import ThumbDownIcon from '@material-ui/icons/ThumbDown'
 import NoVoteIcon from '@material-ui/icons/HelpOutline'
+import ExternalLinkIcon from '@material-ui/icons/Launch'
+import Tooltip from '@material-ui/core/Tooltip'
 
 const ProposalVotes = ({ alphaContract, address, proposal }) => {
   const [receipt, setReceipt] = useState(null)
@@ -46,15 +48,16 @@ const ProposalVotes = ({ alphaContract, address, proposal }) => {
         </>
       }
 
-      return <div className="addressdiv">
-        {content}
-      </div>
+      return <span className="spacingright">{content}</span>
     }
   }
 
   return <Paper variant="outlined" className="innerdiv relative">
     <ReactMarkdown plugins={require('strip-markdown')}>{proposal.returnValues.description.split('\n')[0]}</ReactMarkdown>
-    {getVoteStatusElement()}
+    <div className="addressdiv">
+      {getVoteStatusElement()}
+      <Tooltip title="Uniswap voting"><a href={`https://app.uniswap.org/#/vote/${id}`}>Proposal #{proposal.returnValues['0']} <ExternalLinkIcon fontSize="inherit" /></a></Tooltip>
+    </div>
   </Paper>
 }
 

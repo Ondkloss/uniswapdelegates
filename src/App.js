@@ -120,11 +120,11 @@ function App() {
   }
 
   const getConnectorElement = (contract) => {
-    if(account) {
+    if (account) {
       return getSelfDelegateElement(contract)
     }
     else {
-      if(givenProvider) {
+      if (givenProvider) {
         return getNoAccountElement()
       }
     }

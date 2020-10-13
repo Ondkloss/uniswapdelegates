@@ -1,18 +1,19 @@
-import React from 'react'
-import Web3 from 'web3'
+import Button from '@material-ui/core/Button'
 import Paper from '@material-ui/core/Paper'
-import ExternalLinkIcon from '@material-ui/icons/Launch'
-import CopyIcon from '@material-ui/icons/FileCopy'
-import LinkIcon from '@material-ui/icons/Link'
+import Tooltip from '@material-ui/core/Tooltip'
 import DoneIcon from '@material-ui/icons/Done'
 import DoneAllIcon from '@material-ui/icons/DoneAll'
-import { Link } from 'react-router-dom'
-import Tooltip from '@material-ui/core/Tooltip'
-import Button from '@material-ui/core/Button'
+import CopyIcon from '@material-ui/icons/FileCopy'
 import DelegateIcon from '@material-ui/icons/HowToVote'
+import ExternalLinkIcon from '@material-ui/icons/Launch'
+import LinkIcon from '@material-ui/icons/Link'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Web3 from 'web3'
 import './App.css'
-import { getDelegatesString, copyToClipboard, isAddress } from './utils'
 import Proposal from './Proposal'
+import ProposalVotes from './ProposalVotes'
+import { copyToClipboard, getDelegatesString, isAddress } from './utils'
 
 function Address({ address, from, proposals, contract, alphaContract, showSnackbar, showProposals }) {
   const valid = isAddress(address.address)
@@ -54,8 +55,16 @@ function Address({ address, from, proposals, contract, alphaContract, showSnackb
   }
 
   const getProposalsElement = () => {
-    if (showProposals) {
-      return proposals.map(p => <Proposal key={p.id} alphaContract={alphaContract} proposal={p} />)
+    if (showProposals && proposals) {
+      return proposals.sort((a, b) => b.returnValues['0'] - a.returnValues['0'])
+        .map(p => {
+          if (p.returnValues['1'] === address.address) {
+            return <Proposal key={p.id} alphaContract={alphaContract} proposal={p} />
+          }
+          else {
+            return <ProposalVotes key={p.id} alphaContract={alphaContract} proposal={p} address={address.address} />
+          }
+        })
     }
   }
 

@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/uniswapdelegates/static/css/main.deb42f10.chunk.css",
-    "main.js": "/uniswapdelegates/static/js/main.630da3d2.chunk.js",
-    "main.js.map": "/uniswapdelegates/static/js/main.630da3d2.chunk.js.map",
+    "main.css": "/uniswapdelegates/static/css/main.f8c1b56a.chunk.css",
+    "main.js": "/uniswapdelegates/static/js/main.88645cb8.chunk.js",
+    "main.js.map": "/uniswapdelegates/static/js/main.88645cb8.chunk.js.map",
     "runtime-main.js": "/uniswapdelegates/static/js/runtime-main.391b5796.js",
     "runtime-main.js.map": "/uniswapdelegates/static/js/runtime-main.391b5796.js.map",
-    "static/js/2.9421258c.chunk.js": "/uniswapdelegates/static/js/2.9421258c.chunk.js",
-    "static/js/2.9421258c.chunk.js.map": "/uniswapdelegates/static/js/2.9421258c.chunk.js.map",
+    "static/js/2.9415d1f3.chunk.js": "/uniswapdelegates/static/js/2.9415d1f3.chunk.js",
+    "static/js/2.9415d1f3.chunk.js.map": "/uniswapdelegates/static/js/2.9415d1f3.chunk.js.map",
     "index.html": "/uniswapdelegates/index.html",
-    "precache-manifest.d2b285e8080192084aaf31265a85dd42.js": "/uniswapdelegates/precache-manifest.d2b285e8080192084aaf31265a85dd42.js",
+    "precache-manifest.58d34b925c4704b36f80241d1162c57b.js": "/uniswapdelegates/precache-manifest.58d34b925c4704b36f80241d1162c57b.js",
     "service-worker.js": "/uniswapdelegates/service-worker.js",
-    "static/css/main.deb42f10.chunk.css.map": "/uniswapdelegates/static/css/main.deb42f10.chunk.css.map",
-    "static/js/2.9421258c.chunk.js.LICENSE.txt": "/uniswapdelegates/static/js/2.9421258c.chunk.js.LICENSE.txt"
+    "static/css/main.f8c1b56a.chunk.css.map": "/uniswapdelegates/static/css/main.f8c1b56a.chunk.css.map",
+    "static/js/2.9415d1f3.chunk.js.LICENSE.txt": "/uniswapdelegates/static/js/2.9415d1f3.chunk.js.LICENSE.txt",
+    "static/media/unicorn.png": "/uniswapdelegates/static/media/unicorn.68cfa714.png"
   },
   "entrypoints": [
     "static/js/runtime-main.391b5796.js",
-    "static/js/2.9421258c.chunk.js",
-    "static/css/main.deb42f10.chunk.css",
-    "static/js/main.630da3d2.chunk.js"
+    "static/js/2.9415d1f3.chunk.js",
+    "static/css/main.f8c1b56a.chunk.css",
+    "static/js/main.88645cb8.chunk.js"
   ]
 }

@@ -18,7 +18,10 @@ import AddressList from './AddressList'
 import GoToAddress from './GoToAddress'
 import Store from './store.json'
 import UniswapAbi from './uniswapabi.json'
+import UniswapAlphaAbi from './uniswapalphaabi.json'
 import SimpleSnackbar from './SimpleSnackbar'
+import ProposalWrapper from './ProposalWrapper'
+import Header from './Header'
 
 function App() {
   const [loaded, setLoaded] = useState(false)
@@ -87,7 +90,7 @@ function App() {
     <Button variant="outlined" color="primary" onClick={connect} startIcon={<ConnectIcon fontSize="inherit" color="primary" />}>Connect you account</Button>
   </div>
 
-  const getProviderElement = (contract) => <AddressList list={Store.addresses} from={account} contract={contract} showSnackbar={() => setOpen(true)} />
+  const getProviderElement = (contract, alphaContract) => <AddressList list={Store.addresses} from={account} contract={contract} alphaContract={alphaContract} showSnackbar={() => setOpen(true)} />
 
   const getChainWarningElement = () => {
     const id = parseInt(chain)
@@ -150,24 +153,29 @@ function App() {
   else {
     Contract.setProvider(getProvider())
     const contract = new Contract(UniswapAbi, Store.uniswap)
+    const alphaContract = new Contract(UniswapAlphaAbi, Store.uniswapAlpha)
 
     content = <Switch>
       <Route path="/address/:address">
-        <AddressWrapper from={account} contract={contract} showSnackbar={() => setOpen(true)} />
+        <AddressWrapper from={account} contract={contract} alphaContract={alphaContract} showSnackbar={() => setOpen(true)} />
+      </Route>
+      <Route path="/proposal/:proposal">
+        <ProposalWrapper alphaContract={alphaContract} />
       </Route>
       <Route path="/">
         {getConnectorElement(contract)}
         <GoToAddress />
-        {getProviderElement(contract)}
+        {getProviderElement(contract, alphaContract)}
       </Route>
     </Switch>
   }
 
   return (
     <div className="outerdiv">
-      {getSpaghettiElement()}
+      <Header />
       {getChainWarningElement()}
       {content}
+      {getSpaghettiElement()}
       {getUniswapVoteElement()}
       {getDuneAnalyticsElement()}
       {getEtherScanContractElement()}

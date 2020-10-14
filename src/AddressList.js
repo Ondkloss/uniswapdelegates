@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import Contract from 'web3-eth-contract'
 import Address from './Address'
 import AddressesSum from './AddressesSum'
 import { isAddress } from './utils'
-import Store from './store.json'
-import UniswapAlphaAbi from './uniswapalphaabi.json'
 
-const Addresslist = ({ list, from, contract, showSnackbar }) => {
+const Addresslist = ({ list, from, contract, alphaContract, showSnackbar }) => {
   const [addresses, setAddresses] = useState(null)
   const [proposals, setProposals] = useState([])
-
-  const alphaContract = new Contract(UniswapAlphaAbi, Store.uniswapAlpha)
 
   useEffect(() => {
     const getCurrentVotes = async () => {

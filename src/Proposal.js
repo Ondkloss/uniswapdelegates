@@ -4,9 +4,11 @@ import ReactMarkdown from 'react-markdown'
 import Tooltip from '@material-ui/core/Tooltip'
 import ExternalLinkIcon from '@material-ui/icons/Launch'
 import LinearProgress from '@material-ui/core/LinearProgress'
+import LinkIcon from '@material-ui/icons/Link'
 import { getDelegatesString } from './utils'
 import Grid from '@material-ui/core/Grid'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
 
 const greenTheme = createMuiTheme({
   palette: {
@@ -34,7 +36,7 @@ const redTheme = createMuiTheme({
 const Proposal = ({ alphaContract, proposal }) => {
   const [yes, setYes] = useState(0)
   const [no, setNo] = useState(0)
-  const id = proposal.returnValues['0']
+  const id = proposal.returnValues.id
 
   useEffect(() => {
     const getVotes = async () => {
@@ -60,7 +62,10 @@ const Proposal = ({ alphaContract, proposal }) => {
   return <Paper variant="outlined" className="innerdiv relative">
     <Grid container>
       <Grid item xs={4}>
-        <div className="addressdiv"><Tooltip title="Uniswap voting"><a href={`https://app.uniswap.org/#/vote/${id}`}>Proposal #{proposal.returnValues['0']} <ExternalLinkIcon fontSize="inherit" /></a></Tooltip></div>
+        <div className="addressdiv">
+          <Tooltip title="Permalink"><Link to={`/proposal/${id}`}>Proposal #{id} <LinkIcon fontSize="inherit" /></Link></Tooltip>
+          <Tooltip title="Uniswap voting"><a href={`https://app.uniswap.org/#/vote/${id}`}><ExternalLinkIcon fontSize="inherit" className="spacingleft" /></a></Tooltip>
+        </div>
       </Grid>
       <Grid item xs={4}>
         <div className="addressdiv">For ({getDelegatesString(yes)}, {getProgress(yes).toFixed(0)}%):</div>
@@ -78,7 +83,7 @@ const Proposal = ({ alphaContract, proposal }) => {
         <div className="addressdiv">{getLinearProgress(redTheme, getProgress(no))}</div>
       </Grid>
       <Grid item xs={12}>
-        <ReactMarkdown>{proposal.returnValues['8']}</ReactMarkdown>
+        <ReactMarkdown>{proposal.returnValues.description}</ReactMarkdown>
       </Grid>
     </Grid>
   </Paper>

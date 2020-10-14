@@ -92,3 +92,19 @@ a svg {
   display: flex;
   align-items: center;
 }
+
+.anonlink {
+  text-decoration: none;
+}
+
+.anonlink:visited {
+  color: black;
+}
+
+.anonlink:hover {
+  color: black;
+}
+
+.anonlink:link {
+  color: black;
+}

@@ -56,9 +56,9 @@ function Address({ address, from, proposals, contract, alphaContract, showSnackb
 
   const getProposalsElement = () => {
     if (showProposals && proposals) {
-      return proposals.sort((a, b) => b.returnValues['0'] - a.returnValues['0'])
+      return proposals.sort((a, b) => b.returnValues.id - a.returnValues.id)
         .map(p => {
-          if (p.returnValues['1'] === address.address) {
+          if (p.returnValues.proposer === address.address) {
             return <Proposal key={p.id} alphaContract={alphaContract} proposal={p} />
           }
           else {

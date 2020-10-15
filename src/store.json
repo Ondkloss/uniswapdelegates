@@ -1,12 +1,19 @@
 {
+    "updated": "2020-10-15T17:05:00",
     "uniswap": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
     "uniswapAlpha": "0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F",
     "infura": "5b98cd5ca42b4198a70acb0fcac0a142",
     "addresses": [
         {
-            "alias": "yuni.finance",
-            "address": "0x1994b59E02Cd0d09D839b03660C205e88a929b81",
-            "link": "https://twitter.com/AndreCronjeTech/status/1308689084664213505",
+            "alias": "Agustín Aguilar",
+            "address": "0x47701463ee3a42fb87d24746fb9d8b70f06e6e3a",
+            "link": "https://twitter.com/Agusx1211/status/1307249998610997248",
+            "delegates": 0
+        },
+        {
+            "alias": "andrecronje.eth",
+            "address": "0x2d407ddb06311396fe14d4b49da5f0471447d45c",
+            "link": "https://twitter.com/AndreCronjeTech/status/1308689086375497728",
             "delegates": 0
         },
         {
@@ -22,21 +29,21 @@
             "delegates": 0
         },
         {
+            "alias": "Hiturunk",
+            "address": "0x0be0ecc301a1c0175f07a66243cff628c24db852",
+            "link": "https://gov.uniswap.org/t/hiturunk-for-delegate-mine-eth-uni-now/6788",
+            "delegates": 0
+        },
+        {
             "alias": "monet-supply",
             "address": "0x8d07d225a769b7af3a923481e1fdf49180e6a265",
             "link": "https://gov.uniswap.org/t/delegate-to-monet-supply/1756",
             "delegates": 0
         },
         {
-            "alias": "Agustín Aguilar",
-            "address": "0x47701463ee3a42fb87d24746fb9d8b70f06e6e3a",
-            "link": "https://twitter.com/Agusx1211/status/1307249998610997248",
-            "delegates": 0
-        },
-        {
-            "alias": "andrecronje.eth",
-            "address": "0x2d407ddb06311396fe14d4b49da5f0471447d45c",
-            "link": "https://twitter.com/AndreCronjeTech/status/1308689086375497728",
+            "alias": "yuni.finance",
+            "address": "0x1994b59E02Cd0d09D839b03660C205e88a929b81",
+            "link": "https://twitter.com/AndreCronjeTech/status/1308689084664213505",
             "delegates": 0
         },
         {
@@ -55,9 +62,23 @@
             "delegates": 0
         },
         {
-            "alias": "Hiturunk",
-            "address": "0x0be0ecc301a1c0175f07a66243cff628c24db852",
-            "link": "https://gov.uniswap.org/t/hiturunk-for-delegate-mine-eth-uni-now/6788",
+            "alias": "<Unknown>",
+            "address": "0x2b1ad6184a6b0fac06bd225ed37c2abc04415ff4",
+            "delegates": 0
+        },
+        {
+            "alias": "<Unknown>",
+            "address": "0x05915bbca6fb21f6fe8e314341d27b340049d1f1",
+            "delegates": 0
+        },
+        {
+            "alias": "<Unknown>",
+            "address": "0xd2af803ad747ea12acf5ae468056703ae48785b5",
+            "delegates": 0
+        },
+        {
+            "alias": "<Unknown>",
+            "address": "0xa9338d2617a9ee6661d6676f3e78b20ac78c21da",
             "delegates": 0
         }
     ]

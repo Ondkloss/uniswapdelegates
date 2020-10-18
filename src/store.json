@@ -31,7 +31,13 @@
         {
             "alias": "Hiturunk",
             "address": "0x0be0ecc301a1c0175f07a66243cff628c24db852",
-            "link": "https://gov.uniswap.org/t/hiturunk-for-delegate-mine-eth-uni-now/6788",
+            "link": "https://medium.com/@hiturunk",
+            "delegates": 0
+        },
+        {
+            "alias": "PenguinParty.eth",
+            "address": "0x686B4535FF6573cef3FF37419A4fc6Ac775Ec7ea",
+            "link": "https://medium.com/@hiturunk",
             "delegates": 0
         },
         {

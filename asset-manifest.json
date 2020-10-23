@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/uniswapdelegates/static/css/main.3ae31326.chunk.css",
-    "main.js": "/uniswapdelegates/static/js/main.02d13554.chunk.js",
-    "main.js.map": "/uniswapdelegates/static/js/main.02d13554.chunk.js.map",
+    "main.js": "/uniswapdelegates/static/js/main.f91ff9c3.chunk.js",
+    "main.js.map": "/uniswapdelegates/static/js/main.f91ff9c3.chunk.js.map",
     "runtime-main.js": "/uniswapdelegates/static/js/runtime-main.391b5796.js",
     "runtime-main.js.map": "/uniswapdelegates/static/js/runtime-main.391b5796.js.map",
-    "static/js/2.9415d1f3.chunk.js": "/uniswapdelegates/static/js/2.9415d1f3.chunk.js",
-    "static/js/2.9415d1f3.chunk.js.map": "/uniswapdelegates/static/js/2.9415d1f3.chunk.js.map",
+    "static/js/2.101a5fb3.chunk.js": "/uniswapdelegates/static/js/2.101a5fb3.chunk.js",
+    "static/js/2.101a5fb3.chunk.js.map": "/uniswapdelegates/static/js/2.101a5fb3.chunk.js.map",
     "index.html": "/uniswapdelegates/index.html",
-    "precache-manifest.d3e5455a45a7e5ecbd684ce4cc2efa9b.js": "/uniswapdelegates/precache-manifest.d3e5455a45a7e5ecbd684ce4cc2efa9b.js",
+    "precache-manifest.be629e03e1dc21a8d22810b00aee029b.js": "/uniswapdelegates/precache-manifest.be629e03e1dc21a8d22810b00aee029b.js",
     "service-worker.js": "/uniswapdelegates/service-worker.js",
     "static/css/main.3ae31326.chunk.css.map": "/uniswapdelegates/static/css/main.3ae31326.chunk.css.map",
-    "static/js/2.9415d1f3.chunk.js.LICENSE.txt": "/uniswapdelegates/static/js/2.9415d1f3.chunk.js.LICENSE.txt",
+    "static/js/2.101a5fb3.chunk.js.LICENSE.txt": "/uniswapdelegates/static/js/2.101a5fb3.chunk.js.LICENSE.txt",
     "static/media/unicorn.png": "/uniswapdelegates/static/media/unicorn.68cfa714.png"
   },
   "entrypoints": [
     "static/js/runtime-main.391b5796.js",
-    "static/js/2.9415d1f3.chunk.js",
+    "static/js/2.101a5fb3.chunk.js",
     "static/css/main.3ae31326.chunk.css",
-    "static/js/main.02d13554.chunk.js"
+    "static/js/main.f91ff9c3.chunk.js"
   ]
 }

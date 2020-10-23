@@ -42,6 +42,18 @@ const getDelegatesString = delegates => {
   }
 }
 
+const getDelegatesAsDecimal = delegates => {
+  return delegates / Math.pow(10, 18)
+}
+
+const getAddressObject = address => {
+  return {
+    ...address,
+    alias: address.alias ?? '<Unknown>',
+    delegates: address.delegates ?? 0
+  }
+}
+
 const copyToClipboard = text => {
   const textArea = document.createElement('textarea')
   // Place in top-left corner of screen regardless of scroll position.
@@ -77,4 +89,4 @@ const copyToClipboard = text => {
 
 
 
-export { isAddress, getDelegatesString, copyToClipboard }
+export { isAddress, getDelegatesString, getDelegatesAsDecimal, copyToClipboard, getAddressObject }

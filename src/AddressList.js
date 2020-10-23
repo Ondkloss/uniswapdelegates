@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import CircularProgress from '@material-ui/core/CircularProgress'
 import Address from './Address'
 import AddressesSum from './AddressesSum'
-import { isAddress } from './utils'
+import Skeleton from '@material-ui/lab/Skeleton'
+import Paper from '@material-ui/core/Paper'
+import { getDelegatesAsDecimal, isAddress } from './utils'
 
 const Addresslist = ({ list, from, contract, alphaContract, showSnackbar }) => {
   const [addresses, setAddresses] = useState(null)
@@ -15,7 +16,9 @@ const Addresslist = ({ list, from, contract, alphaContract, showSnackbar }) => {
         const valid = isAddress(address.address)
         if (valid) {
           const result = parseInt(await contract.methods.getCurrentVotes(address.address).call({ from }))
-          newAddresses.push({ ...address, delegates: result })
+          if (list.length === 1 || getDelegatesAsDecimal(result) > 100000) {
+            newAddresses.push({ ...address, delegates: result })
+          }
         }
         else {
           newAddresses.push(address)
@@ -39,7 +42,7 @@ const Addresslist = ({ list, from, contract, alphaContract, showSnackbar }) => {
 
     getProposals()
     getCurrentVotes()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
@@ -51,7 +54,22 @@ const Addresslist = ({ list, from, contract, alphaContract, showSnackbar }) => {
     </>
   }
   else {
-    return <CircularProgress />
+    return (<>
+      <Paper variant="outlined" className="innerdiv">
+        <Skeleton variant="text" />
+      </Paper>
+      {list.map(l => <Paper variant="outlined" className="innerdiv relative">
+        <div className="addressdiv">
+          <Skeleton variant="text" />
+        </div>
+        <div className="addressdiv">
+          <Skeleton variant="text" />
+        </div>
+        <div className="addressdiv">
+          <Skeleton variant="text" />
+        </div>
+      </Paper>)}
+    </>)
   }
 }
 

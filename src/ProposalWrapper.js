@@ -4,6 +4,7 @@ import Proposal from './Proposal'
 import ProposalVotesShort from './ProposalVotesShort'
 import Paper from '@material-ui/core/Paper'
 import Store from './store.json'
+import { getAddressObject } from './utils'
 
 const ProposalWrapper = ({ alphaContract }) => {
   const { proposal } = useParams()
@@ -26,7 +27,7 @@ const ProposalWrapper = ({ alphaContract }) => {
   }, [])
 
   const getVotesElement = currentProposal => {
-    return Store.addresses.map(a => <ProposalVotesShort key={a.address} alphaContract={alphaContract} proposal={currentProposal} address={a} showAddress={true} />)
+    return Store.addresses.map(a => getAddressObject(a)).map(a => <ProposalVotesShort key={a.address} alphaContract={alphaContract} proposal={currentProposal} address={a} showAddress={true} />)
   }
 
   if (proposals.length > 0) {

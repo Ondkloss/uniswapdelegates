@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import CircularProgress from '@material-ui/core/CircularProgress'
 import Paper from '@material-ui/core/Paper'
 import './App.css'
 import { getDelegatesString } from './utils'
 import { Link } from 'react-router-dom'
 import Tooltip from '@material-ui/core/Tooltip'
+import Skeleton from '@material-ui/lab/Skeleton'
 import LinkIcon from '@material-ui/icons/Link'
 
 function SelfDelegate({ from, address, contract }) {
@@ -48,7 +48,7 @@ function SelfDelegate({ from, address, contract }) {
       }
     }
     else {
-      return <CircularProgress />
+      return <Skeleton variant="text" />
     }
   }
 

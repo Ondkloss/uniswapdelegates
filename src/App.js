@@ -22,6 +22,7 @@ import UniswapAlphaAbi from './uniswapalphaabi.json'
 import SimpleSnackbar from './SimpleSnackbar'
 import ProposalWrapper from './ProposalWrapper'
 import Header from './Header'
+import { getAddressObject } from './utils'
 
 function App() {
   const [loaded, setLoaded] = useState(false)
@@ -90,7 +91,7 @@ function App() {
     <Button variant="outlined" color="primary" onClick={connect} startIcon={<ConnectIcon fontSize="inherit" color="primary" />}>Connect you account</Button>
   </div>
 
-  const getProviderElement = (contract, alphaContract) => <AddressList list={Store.addresses} from={account} contract={contract} alphaContract={alphaContract} showSnackbar={() => setOpen(true)} />
+  const getProviderElement = (contract, alphaContract) => <AddressList list={Store.addresses.map(a => getAddressObject(a))} from={account} contract={contract} alphaContract={alphaContract} showSnackbar={() => setOpen(true)} />
 
   const getChainWarningElement = () => {
     const id = parseInt(chain)
